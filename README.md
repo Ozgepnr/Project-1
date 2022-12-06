@@ -3,20 +3,20 @@
 
 int main()
 {
-   int sayi,bas,top=0;
-   printf("Sayi Girin: ");
-   scanf("%d",&sayi);
+   int number,digit,sum=0;
+   printf("Enter a 3 digit number: ");
+   scanf("%d",&number);
    dnz:
-   bas=sayi%10;
-   top=top+bas^3;
-   sayi=sayi/10;
-       if(sayi<10)
-        {top=top+sayi^3;
+   digit=number%10;
+   sum=sum+digit^3;
+   number=number/10;
+       if(number<10)
+        {sum=sum+number^3;
         goto dnz;}
-       if(top==sayi)
-        printf("Esittir");
+       if(sum==number)
+        printf("Equal");
        else
-        printf("Esit degildir");
+        printf("Not equal");
 
        getch();
 }
